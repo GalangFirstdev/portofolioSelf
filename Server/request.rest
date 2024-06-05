@@ -1,0 +1,65 @@
+
+###
+#register
+POST  http://localhost:8000/users
+Content-Type: application/json
+
+{
+    "username" : "risaSayang1",
+    "email" :"risaSayang1@gmail.com",
+    "password" : "risaSayang121",
+    "confirmpassword": "risaSayang121",
+    "role" : "user"
+}
+
+
+###
+#LoginUser
+POST http://localhost:8000/LoginUser
+Content-Type: application/json
+
+{
+    "email" :"risaSayang1@gmail.com",
+    "password" : "risaSayang121",
+}
+
+###
+//update users 
+PATCH  http://localhost:8000/users/ed464bca-ff94-42df-bef3-d0747f2ecee5
+Content-Type: application/json
+
+{
+    "username" : "risaSayang_Updated",
+    "email" :"risaSayang@gmail.com",
+    "password" : "",
+    "confirmpassword": "",
+    "role" : "user"
+}
+
+
+
+###
+#Get all identity
+GET http://localhost:8000/users
+Content-Type: application/json
+
+# {
+#     "email" :"galangmiftah01@gmail.com",
+#     "password" : "Test123",
+# }
+
+###
+#Get identity
+GET http://localhost:8000/UserIdentity
+Content-Type: application/json
+
+
+###
+# Log out Account 
+DELETE http://localhost:8000/Logout
+Content-Type: application/json
+
+### 
+//delete data user 
+DELETE http://localhost:8000/users/ed464bca-ff94-42df-bef3-d0747f2ecee5
+Content-Type: application/json
